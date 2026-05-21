@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+/* RESET KHUSUS NOTIFICATION BIAR GAP HILANG */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #ffffff !important;
+  overflow-x: hidden;
+}
+
+/* Kalau project kamu punya wrapper global */
+.app,
+.App,
+.main-wrapper,
+.page-wrapper,
+.layout-wrapper {
+  background: #ffffff !important;
+}
+
+/* Kalau footer bikin gap bawah di notification page */
+body:has(.notifications-page-container) footer,
+body:has(.notifications-page-container) .footer,
+body:has(.notifications-page-container) .site-footer {
+  display: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.notifications-page-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff !important;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+.notifications-header {
+  display: flex;
+  align-items: center;
+  padding: 40px 24px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  margin: 0;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
+  color: #1a2352;
+  padding: 0;
+}
+
+.notifications-title-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notifications-title-container h1 {
+  color: #1a2352;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.notifications-badge {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SECTION */
+.notifications-section {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.notifications-section-title {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 24px 24px 8px;
+  text-transform: uppercase;
+  background: #ffffff;
+  margin: 0;
+}
+
+/* ITEM */
+.notification-item {
+  display: flex;
+  padding: 16px 24px;
+  align-items: flex-start;
+  gap: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #ffffff;
+  margin: 0;
+}
+
+.notification-item.unread {
+  background-color: #e4ebfb;
+}
+
+.notification-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bg-red-light {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.bg-yellow-light {
+  background-color: #fef3c7;
+  color: #f59e0b;
+}
+
+.bg-green-light {
+  background-color: #dcfce7;
+  color: #10b981;
+}
+
+.bg-blue-light {
+  background-color: #e0f2fe;
+  color: #0ea5e9;
+}
+
+.bg-purple-light {
+  background-color: #f3e8ff;
+  color: #a855f7;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-content h4 {
+  color: #334155;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.notification-content p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.notification-time {
+  color: #94a3b8;
+  font-size: 11px;
+  white-space: nowrap;
+  padding-top: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .notifications-header {
+    padding: 28px 18px 18px;
+  }
+
+  .notifications-title-container h1 {
+    font-size: 28px;
+  }
+
+  .notification-item {
+    padding: 16px 18px;
+    gap: 12px;
+  }
+
+  .notification-time {
+    font-size: 10px;
+  }
+}

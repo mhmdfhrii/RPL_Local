@@ -1,0 +1,91 @@
+/* --- NEWSLETTER SECTION --- */
+.newsletter-wrapper {
+  margin-bottom: 0 !important;
+  padding-bottom: 72px !important;
+  background: #eef4fb !important;
+}
+
+.newsletter-card {
+  margin-bottom: 0 !important;
+}
+.newsletter-card {
+  width: 100%;
+  max-width: 1200px; /* Sesuaikan dengan lebar bento grid kamu */
+  background-color: #e9ecef; /* Abu-abu muda yang soft */
+  border-radius: 60px; /* Sangat bulat sesuai gaya desain kamu */
+  padding: 80px 40px; /* Padding dalam yang luas agar terlihat lega */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Ikon Amplop */
+.newsletter-icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.newsletter-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* Jika ikon kamu warna hitam, pastikan gambarnya bersih */
+}
+
+/* Judul (The Monday Briefing) */
+.newsletter-title {
+  font-family: 'Georgia', serif; /* Pakai serif agar terlihat prestisius */
+  font-size: 42px;
+  font-weight: 500;
+  color: #0b1d2a; /* Biru sangat gelap (hampir hitam) */
+  margin: 0;
+}
+
+/* Deskripsi */
+.newsletter-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #555;
+  max-width: 600px; /* Batasi lebar teks agar enak dibaca 2-3 baris */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Tombol Sign Up */
+.btn-signup {
+  background-color: #051622; /* Warna navy gelap/hitam sesuai referensi */
+  color: #ffffff;
+  border: none;
+  padding: 18px 60px; /* Tombol yang lebar dan besar */
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+  background-color: #0b2a3f;
+  transform: scale(1.05); /* Sedikit membesar saat di-hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .newsletter-card {
+    padding: 50px 20px;
+    border-radius: 40px;
+  }
+  
+  .newsletter-title {
+    font-size: 32px;
+  }
+  
+  .newsletter-desc {
+    font-size: 14px;
+  }
+}

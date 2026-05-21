@@ -1,0 +1,144 @@
+.privacy-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  color: #334155;
+}
+
+.privacy-header {
+  background-color: #e4ebfb;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.privacy-header h1 {
+  color: #1a2352;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: 'Playfair Display', serif;
+}
+
+.privacy-header p {
+  color: #64748b;
+  font-size: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.privacy-content {
+  flex: 1;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.privacy-section {
+  margin-bottom: 40px;
+}
+
+.privacy-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #475569;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.privacy-section-title svg {
+  color: #64748b;
+}
+
+.privacy-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.privacy-subcard {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.privacy-subcard-icon {
+  color: #3b82f6;
+  margin-top: 2px;
+}
+
+.privacy-subcard-content h4 {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.privacy-subcard-content p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.privacy-list {
+  list-style: disc;
+  padding-left: 24px;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.privacy-list li {
+  margin-bottom: 8px;
+}
+
+.privacy-highlight-card {
+  background-color: #1a2352;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.privacy-highlight-card .privacy-section-title {
+  color: #ffffff;
+}
+
+.privacy-highlight-card .privacy-section-title svg {
+  color: #ffffff;
+}
+
+.privacy-highlight-card p {
+  color: #e2e8f0;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.privacy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.privacy-border-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+@media (max-width: 768px) {
+  .privacy-grid {
+    grid-template-columns: 1fr;
+  }
+}
