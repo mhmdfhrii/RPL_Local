@@ -1,0 +1,89 @@
+.footer-container-custom {
+  background-color: #E9ECEF;
+  width: 100vw;              /* Lebar penuh layar */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;        /* Pusatkan ulang */
+  margin-right: -50vw;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.footer-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Container untuk kedua gambar logo */
+.footer-logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  width: 100%;
+  height: 50px;
+}
+
+/* Ukuran Logo Bulat */
+.footer-icon-final {
+  height: 50px;
+  /* Tambahan untuk membuat logo bulat */
+  aspect-ratio: 1 / 1; /* Memastikan lebar dan tinggi sama agar bulat sempurna */
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  object-fit: cover; /* Agar gambar di dalamnya tidak gepeng */
+  margin-left: 40px;
+  width: auto;
+}
+
+/* Ukuran Tulisan Paham.ID */
+.footer-text-final {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  margin-left: 3px;
+  }
+
+/* Container Link Navigasi */
+.footer-links-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  margin: 20px 0;
+  margin-top: 20px;
+}
+
+.footer-links-row a {
+  text-decoration: none;
+  color: #6C757D;
+  font-family: 'Nimbus Sans L', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.footer-links-row a:hover {
+  color: #343a40;
+}
+
+.footer-copyright-text {
+  color: #94A3B8;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: "SF UI text", sans-serif;
+  margin-top: 10px; 
+  text-align: center;
+  width: 100%;
+}

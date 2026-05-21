@@ -1,0 +1,365 @@
+/* =============================================
+   AUTH.CSS — Paham.ID
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+   SIGN IN — full background image, no card
+   ============================================= */
+
+.signin-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff; /* Warna dasar putih */
+}
+
+/* Background dengan pola lekukan sesuai gambar */
+.signin-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/img/signinbg.png'); /* Pastikan file ini ada */
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.signin-form-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* LOGO BULAT */
+.signin-logo-circle-custom {
+  height: 150px;
+  aspect-ratio: 1 / 1;    /* Memastikan lebar dan tinggi sama agar bulat sempurna */
+  border-radius: 50%;     /* Membuat gambar menjadi bulat */
+  object-fit: cover;      /* Agar gambar di dalamnya tidak gepeng */
+  margin-left: 10px; 
+  margin-bottom: 50px;     /* Memberikan jarak kiri sesuai instruksi */
+  width: auto;
+  padding: 5px;           /* Ruang antara gambar dan pinggiran bulat */
+}
+
+
+.signin-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0b3d66; /* Biru gelap bold */
+  margin-bottom: 50px;
+  font-family: 'Serif', Georgia, serif; /* Gaya font sesuai image */
+}
+
+.signin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signin-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signin-input-group label {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0b3d66;
+}
+
+.req { color: #d9534f; }
+
+.signin-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.signin-icon {
+  position: absolute;
+  left: 15px;
+  color: #888;
+}
+
+.signin-input-wrap input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border-radius: 25px; /* Lonjong sesuai gambar */
+  border: none;
+  background-color: #a9a9a9; /* Abu-abu sesuai referensi */
+  color: #fff;
+  font-size: 14px;
+}
+
+.signin-input-wrap input::placeholder {
+  color: #eee;
+}
+
+.signin-eye-btn {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+}
+
+.signin-btn {
+  margin-top: 20px;
+  background-color: #0b3d66; /* Navy Button */
+  color: #f0ad4e; /* Teks Orange/Kuning */
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 120px; /* Ukuran tombol lebih kecil dan ditengah */
+  align-self: center;
+}
+
+.signin-btn:hover {
+  background-color: #082d4d;
+  transform: translateY(-2px);
+}
+
+.signin-footer {
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.signin-footer a {
+  color: #f0ad4e;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* =============================================
+   REGISTER — background Reg.png, card split
+   ============================================= */
+
+.register-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Background Utama */
+.register-bg-full {
+  position: absolute;
+  inset: 0;
+  background: url('/img/Reg.png') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.register-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- SISI KIRI (Branding) --- */
+.register-left-branding {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.branding-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-right: 15%; /* Geser dikit biar pas di tengah area putih reg.png */
+}
+
+.logo-square-style {
+  width: 360px;
+  height: 360px;
+  border-radius: 90px; /* Bikin kotak rounded */
+  object-fit: cover;
+  margin-left: 100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.branding-text-img {
+  width: 350px; /* Ukuran gambar tulisan Paham.ID di bawah logo */
+  height: auto;
+  margin-left: 110px;
+}
+
+/* --- SISI KANAN (Form) --- */
+.register-right-form {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.register-box {
+  width: 100%;
+  max-width: 420px;
+  color: white;
+}
+
+.register-header-text {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 5px;
+  letter-spacing: -1.5px;
+}
+
+.register-sub {
+  font-size: 15px;
+  color: #cbd5e0;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* --- INPUT STYLING --- */
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-field-group {
+  width: 100%;
+}
+
+.input-field-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  color: #ffffff;
+}
+
+.req {
+  color: #f56565;
+  margin-left: 2px;
+}
+
+.input-icon-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon-left {
+  position: absolute;
+  left: 20px;
+  color: #a0aec0;
+}
+
+.input-icon-wrap input {
+  width: 100%;
+  padding: 15px 20px 15px 55px;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparan biar nyatu sama navy */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 35px; /* Pill style bulat banget */
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-icon-wrap input:focus {
+  border-color: #f6ad55;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.input-icon-wrap input::placeholder {
+  color: #a0aec0;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #cbd5e0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* --- BUTTON ORANGE --- */
+.submit-btn-orange {
+  width: 240px; /* Ukuran tombol sesuai referensi */
+  background-color: #f6ad55; /* Warna orange solid */
+  color: #0b3d66;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-left: 101px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submit-btn-orange:hover {
+  background-color: #ed8936;
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+.login-footer {
+  margin-top: 10px;
+  margin-left: 105px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.signin-link {
+  color: #f6ad55;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.signin-link:hover {
+  color: #ed8936;
+}
+
